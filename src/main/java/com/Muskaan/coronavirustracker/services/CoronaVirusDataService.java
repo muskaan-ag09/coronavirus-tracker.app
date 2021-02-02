@@ -29,7 +29,7 @@ public class CoronaVirusDataService {
     private List<LocationStats> allStats=new ArrayList<>();
 
     @PostConstruct
-    @Scheduled(cron = "* * 1 * * *")
+    @Scheduled(cron = "* * * * * *")
     public void fetchData() throws IOException, InterruptedException {
         List<LocationStats> newStats=new ArrayList<>();
         HttpClient client=HttpClient.newHttpClient();
